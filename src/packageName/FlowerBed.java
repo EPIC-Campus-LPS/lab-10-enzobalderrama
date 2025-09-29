@@ -34,7 +34,7 @@ public class FlowerBed {
 			}
 		}
 		if (bed[bed.length-1] == null && bed[bed.length-2] == null) {
-			bed[bed.length] = f;
+			bed[bed.length-1] = f;
 			return bed.length-1;
 		}
 		return -1;
@@ -51,9 +51,22 @@ public class FlowerBed {
 	}
 	public String toString() {
 		String full = "FlowerBed{";
-		for (int i = 0; i < bed.length; i++) {
-			full += toStringSmall(bed[i]);
+		int j = 0;
+		if (bed[j] == null) {
+			full += "null";
+		}
+		else{
+			full += bed[j].toStringSmall();
+		}
+		for (int i = 1; i < bed.length; i++) {
+			if (bed[i] == null) {
+				full += ", null";
+			}
+			else{
+				full += ", " + bed[i].toStringSmall();
+			}
 		}
 		full += "}";
+		return full;
 	}
 }

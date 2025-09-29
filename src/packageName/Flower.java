@@ -13,7 +13,7 @@ public class Flower {
 		return species;
 	}
 	
-	public String toStringSmall(String s) {
-		return "Flower{" + species + "}";
+	public String toStringSmall() {
+		return "Flower{" + getSpecies() + "}";
 	}
 }

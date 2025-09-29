@@ -1,11 +1,7 @@
 package packageName;
-
-import java.io.File;  
-import java.io.IOException;  
-import java.util.Scanner;  
   
 public class FlowerRunner {  
-    public static void main(String[] args) throws IOException {  
+    public static void main(String[] args){  
           
         System.out.println("Example 0");  
         Flower f = new Flower("Sunflower");  
